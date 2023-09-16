@@ -1,61 +1,71 @@
 ------Insert dos atributos no banco------
 ----insert da tabela conta_paciente ------
-(nome_pac,nr_atendimento
-(18141,'Antonio Gomes',FALSO,2023-01-23','2023-01-25',1,1);
-(48568,'Daniel Egydio Caldevilla',32164,2023-01-25','2023-6-13',1,2);
-(53110,'Valdir Angelo Molinari',28474,2023-01-15','2023-4-24',1,3);
-(43230,'Fernando Barreto de Meneses',18601,2023-01-25',2023-12-3',1,4);
-(5921,'Fabio Liyudi Takei',15457,2023-01-14',2023-3-18',1,5);
-(22644,'Ivan Valente',53682,2023-01-8',2023-12-30',1,6);
-(18125,'Edinilson Pereira da Silva Filho',1227,2023-01-17',2023-2-12',1,7);
-(39506,'Maria Aparecida de Andrade',17758,2023-01-19',2023-7-11',1,8);
+insert into conta_paciente(nr_conta ,nome_pac ,nr_atendimento ,dt_entrada ,dt_saida ,DS_STATUS ,nr_seq_conv)
+values
+('18141','Antonio Gomes',FALSO','2023-01-23','2023-01-25','1.1'),
+('48568','Daniel Egydio Caldevilla','32164','2023-01-25','2023-6-13','1','2'),
+('53110','Valdir Angelo Molinari','28474','2023-01-15','2023-4-24','1','3'),
+('43230','Fernando Barreto de Meneses','18601','2023-01-25','2023-12-3','1','4'),
+('5921','Fabio Liyudi Takei','15457','2023-01-14','2023-3-18','1','5'),
+('22644','Ivan Valente','53682','2023-01-8','2023-12-30','1','6'),
+('18125','Edinilson Pereira da Silva Filho','1227','2023-01-17','2023-2-12','1','7'),
+('39506','Maria Aparecida de Andrade','17758','2023-01-19','2023-7-11','1','8');
 
 ---------Insert da tabela convenio--------------
 
-('1','2',Afresp (AMAFRESP)');
-('2','3',Allianz Saúde');
-('3','6',Amha Saúde');
-('4','7',AMIL');
-('5','10',BANCO CENTRAL');
-('6','12',Bradesco');
-('7','13',Bradesco Saude - Operadora de Planos S/A');
-('8','14',Cabesp');
-('9','16',Caixa/Pams');
-('10','25',CarePlus');
-('11','29',CASSI');
-('12','34',Central Nacional Unimed - CNU');
-('13','38',CET');
-('14','40',GAMA');
+insert into convenio(nr_seq_conv,cd_convenio,ds_convenio)
+values
+
+('1','2','Afresp (AMAFRESP)'),
+('2','3','Allianz Saúde'),
+('3','6','Amha Saúde')'
+('4','7','AMIL'),
+('5','10','BANCO CENTRAL')
+('6','12','Bradesco'),
+('7','13','Bradesco Saude - Operadora de Planos S/A');
+('8','14','Cabesp'),
+('9','16','Caixa/Pams'),
+('10','25','CarePlus'),
+('11','29',CASSI'),
+('12','34','Central Nacional Unimed - CNU'),
+('13','38','CET'),
+('14','40','GAMA');
 
 ---------------Insert tabela Especialidade_medica -------------
-(1Médico Nefrologista,'778391,'Ana Cristina Salles Abreu de Almeida','5603','1');
-(1Médico Nefrologista,'765691,'Sandra Martinelli','3499','2');
-(1Médico Nefrologista,'823301,'Clarisse Aparecida Teles do Prado','745','3');
-(1Médico Nefrologista,'869781,'Lucinda Moreira dos Santos','4786','4');
-(1Médico Nefrologista,'868961,'Mario Kazuo Terui','1612','5');
-(2Médico Dermatologia,'912532,'Marcos Antonio da Silva','2866','6');
-(2Médico Dermatologia,'1161882,'Antonia dos Santos Oliveira','4204','7');
-(2Médico Dermatologia,'1205942,'Marina Martins P. Padovani','4811','8');
-(2Médico Dermatologia,'1214902,'Marina Martins Pereira Padovani','550','9');
-(2Médico Dermatologia,'1277682,'Francisco Jose dos Santos','1791','10');
-(2Médico Dermatologia,'1383742,'Maria Aparecida da Silva','1625','11');
-(14Médico Dermatologia,'16886414,'Celia Chagas Vintecinco','5967','12');
-(15Médico Vascular,'20610815,'Felomena Alves dos Santos','2745','13');
-(16Médico Vascular,'20611816,'Maria Isabel dos Santos','4829','14');
+
+insert into especialidade_medica(cd_especialidade,ds_especialidade,cd_medico,ds_medico,cd_crm,nr_seq_conv) 
+values
+('1','médico Nefrologista','778391','Ana Cristina Salles Abreu de Almeida','5603','1'),
+('1','Médico Nefrologista','765691','Sandra Martinelli','3499','2'),
+('1','Médico Nefrologista','823301','Clarisse Aparecida Teles do Prado','745','3'),
+('1','Médico Nefrologista','869781,'Lucinda Moreira dos Santos','4786','4'),
+('1','Médico Nefrologista','868961','Mario Kazuo Terui','1612','5'),
+('2','Médico Dermatologia','912532','Marcos Antonio da Silva','2866','6'),
+('2','Médico Dermatologia','1161882','Antonia dos Santos Oliveira','4204','7'),
+('2','Médico Dermatologia','1205942','Marina Martins P. Padovani','4811','8'),
+('2','Médico Dermatologia,'1214902','Marina Martins Pereira Padovani','550','9'),
+('2','Médico Dermatologia','1277682','Francisco Jose dos Santos','1791','10'),
+('2','Médico Dermatologia','1383742','Maria Aparecida da Silva','1625','11'),
+('14','Médico Dermatologia','16886414','Celia Chagas Vintecinco','5967','12'),
+('15','Médico Vascular','20610815','Felomena Alves dos Santos','2745','13'),
+('16','Médico Vascular','20611816','Maria Isabel dos Santos','4829','14'),
 
 -------insert da tabela material_procedimento-------------
 
-2741892960015292,'Taxa De Aplicacao De Injecao Ev, Fora Da Uti/Semi-Uti E Do Centro Cirurgico, Por Uso/Sessao,'24.6');
-(2728713310065,'Consulta em PA,'66','3');
-(27287137301060029,' ATENDIMENTO MEDICO EM UNIDADE DE PA,'12.47','4');
-(27287138301010048,'CONSULTA DE PROFISSIONAIS,'6.3','5');
-(2745286710101039,'Consulta em PA,'407.55','6');
-(2728699610101039,'Consulta em PA,'32.99','7');
-(27287342301060029,' ATENDIMENTO MEDICO EM UNIDADE DE PA,'12.47','8');
-(27287343301010048,'CONSULTA DE PROFISSIONAIS,'6.3','9');
-(27287367301060029,' ATENDIMENTO MEDICO EM UNIDADE DE PA,'0','10');
-(27287368301010048,'CONSULTA DE PROFISSIONAIS,'0','11');
-(27287384301060029,' ATENDIMENTO MEDICO EM UNIDADE DE PA,'0','12');
-(27287385301010048,'CONSULTA DE PROFISSIONAIS,'0','13');
-(27287387301060029,' ATENDIMENTO MEDICO EM UNIDADE DE PA,'12.47','14');
+insert into material_procedimento(nr_sequencia,cd_procedimento,vl_procedimento,ds_procedimento,nr_seq_conv)
+values
+
+('27418929','60015292','Taxa De Aplicacao De Injecao Ev, Fora Da Uti/Semi-Uti E Do Centro Cirurgico, Por Uso/Sessao','24.6'),
+('27287133','10065,'Consulta em PA','66','3'),
+('27287137','301060029',' ATENDIMENTO MEDICO EM UNIDADE DE PA,'12.47','4');
+('27287138','301010048','CONSULTA DE PROFISSIONAIS,'6.3','5'),
+('27452867','10101039','Consulta em PA,'407.55','6'),
+('27286996','10101039','Consulta em PA,'32.99','7'),
+('27287342','301060029',' ATENDIMENTO MEDICO EM UNIDADE DE PA,'12.47','8'),
+('27287343','301010048','CONSULTA DE PROFISSIONAIS,'6.3','9'),
+('27287367','301060029',' ATENDIMENTO MEDICO EM UNIDADE DE PA,'45','10'),
+('27287368','301010048','CONSULTA DE PROFISSIONAIS,'6.3','11'),
+('27287384','301060029',' ATENDIMENTO MEDICO EM UNIDADE DE PA,'45','12'),
+('27287385','301010048','CONSULTA DE PROFISSIONAIS,'6.3','13'),
+('27287387','301060029',' ATENDIMENTO MEDICO EM UNIDADE DE PA,'12.47','14');
 
