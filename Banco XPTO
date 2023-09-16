@@ -1,0 +1,31 @@
+
+CREATE TABLE convenio(
+    nr_seq_conv int(11) auto_increment primary key,
+	cd_convenio int(16) not null,
+    ds_convenio varchar(30) not null
+    );
+    
+CREATE TABLE Conta_paciente(
+     nr_conta int(10) auto_increment primary key,
+nome_pac varchar(30) not null,
+nr_atendimento int(11) not null,
+dt_entrada date not null,
+dt_saida date not null,
+DS_STATUS int(10),
+nr_seq_conv int(10)
+);
+       
+CREATE TABLE Material_procedimento(
+nr_sequencia int(10) auto_increment primary key,
+cd_procediemnto int(10) not null,
+ds_procedimento varchar(150) not null, 
+VL_Procedimento int(16)
+);
+
+CREATE TABLE especialidade_medica(
+cd_especialidade int (11) auto_increment primary key,
+ds_especialidade varchar(30),
+cd_medico int(10)not null,
+ds_medico varchar(30)not null,
+cd_crm int(10)not null
+);
